@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>Callback-Konverter</title>
+  <title>Callback-Converter</title>
   <style>
     body { font-family: sans-serif; margin: 20px; }
     textarea { width: 100%; height: 200px; margin-bottom: 10px; font-family: monospace; white-space: pre; }
@@ -11,12 +11,12 @@
 </head>
 <body>
 
-  <h2>⚙️ JavaScript Callback-Konverter</h2>
-  <p>Ersetze <code>function name(...)</code> oder <code>name = (...) => {...}</code> durch <code>addCb(...)</code>. Minifizierter Mehrfachregistrierungscode inklusive!</p>
+  <h2>⚙️ Bloxd Callback Converter</h2>
+  <p>Enter your Code here:</p>
 
-  <textarea id="inputCode" placeholder="Dein JavaScript-Code hier einfügen…"></textarea>
-  <button onclick="convertCallbacks()">🔄 Umwandeln</button>
-  <textarea id="outputCode" placeholder="Hier erscheint der konvertierte Code…" readonly></textarea>
+  <textarea id="inputCode" placeholder="Your JavaScript-Code here…"></textarea>
+  <button onclick="convertCallbacks()">🔄 Convert</button>
+  <textarea id="outputCode" placeholder="" readonly></textarea>
 
   <script>
     const callbacks = [
@@ -54,7 +54,7 @@
       document.getElementById('outputCode').value = output;
     }
 
-    // Tabs im Textfeld erlauben
+
     document.getElementById("inputCode").addEventListener("keydown", function(e) {
       if (e.key === "Tab") {
         e.preventDefault();
